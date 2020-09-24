@@ -54,7 +54,8 @@ describe("MessageDisplay", () => {
         // check that call happened once
         expect(getMessage).toHaveBeenCalledTimes(1);
         // check that component displays error
-        const error = wrapper.find('[data-testid="error"]').element.textContent;
-        expect(error).toEqual(mockError);
+        const displayedError = wrapper.find('[data-testid="message-error"]').element
+            .textContent;
+        expect(displayedError).toEqual(mockError);
     });
 });
